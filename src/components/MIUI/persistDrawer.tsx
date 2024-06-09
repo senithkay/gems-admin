@@ -125,22 +125,7 @@ export default function PersistentDrawerLeft({children}:{children:ReactNode}) {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Upload Products', 'Leaflets', 'Contact Details', 'Manage Content', 'Student Data'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton onClick={()=>{
-                                router.push(`/app/${text.toLowerCase().replace(' ', '-')}`)
-                            }}>
-                                <ListItemIcon>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['Help'].map((text, index) => (
+                    {['Upload Products', 'Price Requests'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton onClick={()=>{
                                 router.push(`/app/${text.toLowerCase().replace(' ', '-')}`)

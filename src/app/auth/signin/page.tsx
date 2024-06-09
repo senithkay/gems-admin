@@ -25,7 +25,7 @@ const Page = () => {
         axiosInstance.post('/auth/login', credentials)
         .then((response)=>{
             if (response.status === RESPONSE_STATUS.SUCCESS){
-                router.push('/app/help')
+                router.push('/app/upload-products')
             }
         })
 
